@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+	
+</script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js">
+	
+</script>
+<style>
+div {
+	background-color: red;
+	height: 100px;
+	width: 100%;
+}
+</style>
+</head>
+<body ng-app="">
+	<input type="checkbox" ng-model="mycheck">
+	<div ng-hide="mycheck"></div>
+	<button ng-click="save()">submit</button>
+</body>
+</html>

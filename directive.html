@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Directives</title>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+	
+</script>
+<script src="directive.js"></script>
+</head>
+<body>
+	<div ng-app="myModule" ng-controller="myController">
+	<div>
+	name:{{country.name}}
+	</div>
+	<div>
+	color:{{country.color}}
+	</div>
+		<div>
+			<img ng-src="{{country.flag}}"
+				 alt="{{'flag'}}" height=100px width=200px;/>
+		</div>
+	</div>
+</body>
+</html>

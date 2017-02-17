@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Angularjs</title>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app>
+	<div>{{['raj', 'hari', 'david'][2]}}</div>
+	<div>10+20={{10+20}}</div>
+	<div ng-init="firstname='mike'">
+	<p>first name is:<span ng-bind="firstname"></span></p>
+	<p><span ng-bind=" 10"></span></p>
+	</div>
+	<div>
+	<input type="text" ng-model="one">
+	<p>you written:{{one}}</span></p>
+	</div>
+	<div ng-init="a=5;b=6">
+	<p><span ng-bind="a*b"></span></p>
+	</div>
+	<div ng-init="firstname='srujan';lastname='pasham'" >
+	<p><span ng-bind="firstname+' '+lastname"></span></p>
+	</div>
+	<div ng-init="person={firstname:'srujan',lastname:'pasham'}">
+	<p><span ng-bind="person.firstname+person.lastname"></span></p>
+	</div>
+</body>
+</html>

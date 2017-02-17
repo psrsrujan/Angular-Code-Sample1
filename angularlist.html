@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>List of names</title>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+	
+</script>
+</head>
+<body>
+	<div ng-app="" ng-init="employee=['john', 'jack', 'tom', 'david']">
+		<p>Names of employees</p>
+		<ul>
+			<li ng-repeat="name in employee">{{name}}</li>
+		</ul>
+	</div>
+</body>
+</html>

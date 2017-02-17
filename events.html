@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Module and Controller</title>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">	
+</script>
+<script src="events.js"></script>
+<script src="angular.js"></script>
+<link rel="stylesheet" type="text/css" href="event.css">
+</head>
+<body ng-app="myModule">
+	<div ng-controller="myController">
+		<table>
+			<thead>
+				<tr>
+				<th>Name</th>
+				<th>Likes</th>
+				<th>Dislikes</th>
+				<th>Like/Dislikes</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="technology in technologies">
+			<td>{{technology.name}}</td>
+			<td>{{technology.likes}}</td>
+			<td>{{technology.dislikes}}</td>
+			<td>
+			<input type="button" value="like" ng-click="incrementLikes(technology)">
+			<input type="button" value="Dislike" ng-click="incrementDislikes(technology)">
+			</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

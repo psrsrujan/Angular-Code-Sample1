@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ng init</title>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="nginit.js"></script>
+<link rel="stylesheet" type="text/css" href="nginit.css">
+</head>
+<body ng-app="myModule">
+	<div ng-controller="myController">
+		<ul>
+			<li ng-repeat="country in countries" ng-init="parentIndex=$index">
+			{{country.name}}
+				<ul>
+					<li ng-repeat="city in country.cities">
+					{{city.name}} - parent Index = {{parentIndex}}, Index = {{$index}}
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+	</div>
+</body>
+</html>

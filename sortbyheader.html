@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sorting Data</title>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">	
+</script>
+<script src="sortbyheader.js"></script>
+<script src="angular.js"></script>
+<link rel="stylesheet" type="text/css" href="sortbyheader.css">
+</head>
+<body ng-app="myModule">
+	<div ng-controller="myController">
+	<table>
+			<thead>
+				<tr>
+				<th ng-click="sortData('name')">Name <div ng-class="getSortClass('name')"></div></th>
+				<th ng-click="sortData('dateOfBirth')">DateOfBirth <div ng-class="getSortClass('dateOfBirth')"></div></th>
+				<th ng-click="sortData('gender')">Gender <div ng-class="getSortClass('gender')"></div></th>
+				<th ng-click="sortData('salary')">Salary <div ng-class="getSortClass('salary')"></div></th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="employee in employees | orderBy:sortColumn:reverseSort">
+			<td>{{employee.name | uppercase}}</td>
+			<td>{{employee.dateOfBirth | date: "MM/dd/yyyy"}}</td>
+			<td>{{employee.gender | lowercase}}</td>
+			<td>{{employee.salary}}</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ng init</title>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="nginclude.js"></script>
+<link rel="stylesheet" type="text/css" href="nginclude.css">
+</head>
+<body ng-app="myModule">
+	<div ng-controller="myController">
+	<div ng-include="'WebContent/include.html'">
+	</div>	
+	</div>
+</body>
+</html>

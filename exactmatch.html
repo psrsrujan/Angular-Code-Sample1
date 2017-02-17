@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>exactmatch Data</title>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">	
+</script>
+<script src="exactmatch.js"></script>
+<script src="angular.js"></script>
+<link rel="stylesheet" type="text/css" href="exactmatch.css">
+</head>
+<body ng-app="myModule">
+	<div ng-controller="myController">
+	<input type="text" placeholder="search city & name" ng-model="searchText"/>
+
+		</br></br>
+		<table>
+			<thead>
+				<tr>
+				<th>Name</th>
+				<th>Gender</th>
+				<th>Salary</th>
+				<th>City</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="employee in employees | filter:search">
+			<td>{{employee.name}}</td>
+			<td>{{employee.gender}}</td>
+			<td>{{employee.salary}}</td>
+			<td>{{employee.city}}</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
